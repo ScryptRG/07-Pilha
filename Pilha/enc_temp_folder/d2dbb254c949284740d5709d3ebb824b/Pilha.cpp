@@ -7,7 +7,6 @@ struct NO {
 	NO* prox;
 };
 
-
 NO* topo = NULL;
 
 // headers
