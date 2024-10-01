@@ -86,14 +86,24 @@ void push()
 	cout << "Digite o elemento: ";
 	cin >> novo->valor;
 	novo->prox = NULL;
+	NO* aux = topo;
+	
+	if (aux != NULL) {
+		topo->prox = novo;
+	}
+	else {
+		topo = novo;
+	}
 
 
 }
 
 void pop()
 {
-
-	
-
+	NO* aux = topo;
+	cout << "O valor " << aux->valor << " foi excluido." << endl;
+	aux = NULL;
+	free(aux);
+	topo = topo->prox;
 }
 
